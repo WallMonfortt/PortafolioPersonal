@@ -1,0 +1,40 @@
+.grid {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s lineal 1s;
+}
+
+.grid.images-loaded {
+    opacity: 1;
+}
+
+.grid .item {
+    position: absolute;
+    display: block;
+    padding: 0%;
+    margin: 10px;
+    width: calc(33.33333333% - 20px);
+}
+
+.grid .item-contain {
+    position: relative;
+}
+
+.grid .item img {
+    width: 100%;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+/* mediaqueries */
+
+@media screen and (max-width: 700px) {
+    .grid .item {
+        width: calc(50% - 20px);
+    }
+
+    header .search-bar {
+        width: 100%;
+    }
+}
